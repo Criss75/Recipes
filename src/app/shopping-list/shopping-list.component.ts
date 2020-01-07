@@ -9,7 +9,9 @@ import { Component, OnInit } from "@angular/core";
 export class ShoppingListComponent implements OnInit {
   ingredients: Ingredient[] = [
     new Ingredient("Apples", 5),
-    new Ingredient("Tomatoes", 10)
+    new Ingredient("Tomatoes", 10),
+    new Ingredient("Peaches", 1),
+    new Ingredient("Onions", 17)
   ];
 
   constructor() {}
