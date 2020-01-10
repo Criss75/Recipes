@@ -1,5 +1,5 @@
 import { Recipe } from "./recipe.model";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ElementRef, Renderer2 } from "@angular/core";
 
 @Component({
   selector: "app-recipes",
@@ -7,15 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./recipes.component.css"]
 })
 export class RecipesComponent implements OnInit {
-  recipes: Recipe[] = [
-    new Recipe(
-      "A test recipe",
-      "This is a simple test",
-      "https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_1280.jpg"
-    )
-  ];
+  selectedRecipe: Recipe;
 
-  constructor() {}
+  constructor(private elRef: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit() {}
 }
